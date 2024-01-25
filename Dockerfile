@@ -11,8 +11,8 @@ RUN CGO_ENABLED=0 \
     VersionPath="rttys/version" \
     GitCommit=$(git log --pretty=format:"%h" -1) \
     BuildTime=$(date +%FT%T%z) \
-    go build -ldflags="-s -w -X $VersionPath.gitCommit=$GitCommit -X $VersionPath.buildTime=$BuildTime" -o rabbit
+    go build -ldflags="-s -w -X $VersionPath.gitCommit=$GitCommit -X $VersionPath.buildTime=$BuildTime" -o rabbits
 
 FROM alpine:latest
-COPY --from=rttys /rttys-build/rabbit /usr/bin/rabbit
-ENTRYPOINT ["/usr/bin/rabbit"]
+COPY --from=rttys /rttys-build/rabbits /usr/bin/rabbits
+ENTRYPOINT ["/usr/bin/rabbits"]
