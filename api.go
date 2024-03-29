@@ -122,7 +122,7 @@ func getLoginUsername(c *gin.Context) string {
 func apiStart(br *broker) {
 	cfg := br.cfg
 
-	httpSessions = cache.New(30*time.Minute, 5*time.Second)
+	httpSessions = cache.New(240*time.Minute, 5*time.Second)
 
 	gin.SetMode(gin.ReleaseMode)
 
