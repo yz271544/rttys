@@ -11,9 +11,6 @@
         <Button type="primary" size="large" long @click="handleSubmit">{{ signup ? $t('Sign up') : $t('Sign in') }}</Button>
       </FormItem>
     </Form>
-    <p style="text-align: center">{{ $t('Already have an account?') }}<a href="/login" style="text-decoration: none; color: #1c7cd6">{{ $t('Sign in') }}</a></p>
-    <!-- <p v-if="signup" style="text-align: center">{{ $t('Already have an account?') }}<a href="/login" style="text-decoration: none; color: #1c7cd6">{{ $t('Sign in') }}</a></p>
-    <p v-else style="text-align: center">{{ $t('New to Rttys?') }}<a href="/login?signup=1" style="text-decoration: none; color: #1c7cd6">{{ $t('Sign up') }}</a></p> -->
   </Card>
 </template>
 
