@@ -71,3 +71,9 @@ Quit from database console by exit.
 ## Contributing
 If you would like to help making [rttys](https://github.com/zhaojh329/rttys) better,
 see the [CONTRIBUTING.md](https://github.com/zhaojh329/rttys/blob/master/CONTRIBUTING.md) file.
+
+## build
+
+```shell
+make all
+```
