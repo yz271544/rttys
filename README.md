@@ -64,16 +64,19 @@ FLUSH PRIVILEGES;
 
 Quit from database console by exit.
 
+## build images
+
+```shell
+make all
+```
+
 ## Docker
 
-    sudo docker run -it -p 5912:5912 -p 5913:5913 zhaojh329/rttys:latest
+```shell
+    sudo docker run -it --name rabbits -p 5912:5912 -p 5913:5913 -v /etc/localtime:/etc/localtime -v /sdc1/download/rabbits/rttys.db:/rttys.db rabbit/rabbits:v4.1.3
+```
 
 ## Contributing
 If you would like to help making [rttys](https://github.com/zhaojh329/rttys) better,
 see the [CONTRIBUTING.md](https://github.com/zhaojh329/rttys/blob/master/CONTRIBUTING.md) file.
 
-## build
-
-```shell
-make all
-```
